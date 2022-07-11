@@ -10,11 +10,11 @@
 
 <body>
   <div class="grid">
-
-    <div class="item normal">
-      <a onclick="afficher('Tralse');"><img class="border" src="./res/img/Tralse.png"></a>
+    <div class="container normal">
+      <div class="item">
+          <img src="./res/img/Tralse.png" onclick="console.log('Tralse'); afficher('Tralse'); " alt="logo de Tralse">
+      </div>
     </div>
-
     <div id="Tralse" class="overlay">
       <div class="popup">
         <h3>Tralse</h3>
@@ -22,27 +22,31 @@
         <a class="close" href="#">&times;</a>
         <div class="content">
           <p>Tralse est un projet en cours de développement visant à lutter contre les fake news. </p>
-          <p>Ce projet est réalisé avec <a class="langage" href="https://clementgeraudie.fr"
-            target="_blank">Clément Géraudie</a> en <span class="langage">PHP</span>, <span class="langage">HTML</span>, <span
+          <p>Ce projet est réalisé avec <a class="langage" href="https://clementgeraudie.fr" target="_blank">Clément
+              Géraudie</a> en <span class="langage">PHP</span>, <span class="langage">HTML</span>, <span
               class="langage">CSS</span> et <span class="langage">JS</span>.</p>
-          <button class="button effectButton" onclick="window.open('sites/ChoixDeChat/index.html', '_blank');">Voir le
-            site</button>
         </div>
       </div>
     </div>
 
-    <div id="ColressDiv" class="item normal" onclick="afficher('Colress');">
-      <div class="loader">
-        <svg viewBox="0 0 600 300">
-          <symbol id="s-text">
-            <text text-anchor="middle" x="50%" y="50%" dy=".35em">Colress</text>
-          </symbol>
-          <use class="text" xlink:href="#s-text"></use>
-          <use class="text" xlink:href="#s-text"></use>
-          <use class="text" xlink:href="#s-text"></use>
-          <use class="text" xlink:href="#s-text"></use>
-          <use class="text" xlink:href="#s-text"></use>
-        </svg>
+
+
+
+
+    <div class="container normal">
+      <div id="ColressDiv" class="item" onclick="afficher('Colress');">
+        <div class="loader">
+          <svg viewBox="0 0 600 300">
+            <symbol id="s-text">
+              <text text-anchor="middle" x="50%" y="50%" dy=".35em">Colress</text>
+            </symbol>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+          </svg>
+        </div>
       </div>
     </div>
     <div id="Colress" class="overlay">
@@ -55,6 +59,7 @@
             permettant d'ajouter différentes fonctions comme mettre de la musique ou instaurer un système de rôle.</p>
           <p>J'ai été contacté pour réalisé le site vitrine de celui-ci en <span class="langage">HTML</span>, <span
               class="langage">CSS</span> et <span class="langage">JS</span>.</p>
+          <a href="https://github.com/BenjaminBrehier/Colress" target="_blank"><img src="./res/img/Github.png"></a>
           <button class="button effectButton" onclick="window.open('sites/ChoixDeChat/index.html', '_blank');">Voir le
             site</button>
         </div>
@@ -62,10 +67,17 @@
     </div>
 
 
-    <div class="item large">
-      <a class="big" onclick="afficher('SentyMental');"><img src="./res/img/Sentymental.png"></a>
-      <a class="small under" onclick="afficher('CDC');"><img src="./res/img/ChoixDeChat.png"></a>
+
+
+    <div class="container normal"></div> <!--! est caché dessous  -->
+    <div class="container large" id="droite">
+      <div class="item big">
+        <img src="./res/img/Sentymental.png"onclick="afficher('SentyMental');" alt="image de Sentymental"></div>
+      <div class="item small">
+        <img src="./res/img/ChoixDeChat.png" onclick="afficher('CDC');" alt="Image de ChoixDeChat">
+      </div>
     </div>
+
     <div id="SentyMental" class="overlay">
       <div class="popup">
         <h3>SentyMental</h3>
@@ -77,12 +89,15 @@
           <p>Ce projet a été réalisé en équipe avec <a class="langage" href="https://clementgeraudie.fr"
               target="_blank">Clément Géraudie</a> et <a class="langage" href="https://github.com/denisebitca"
               target="_blank">Denise Bitca</a> en <span class="langage">HTML</span>, <span class="langage">PHP</span>,
-            <span class="langage">CSS</span>, <span class="langage">JS</span> et <span class="langage">MySQL</span></p>
-          <button class="button effectButton" onclick="window.open('sites/ChoixDeChat/index.html', '_blank');">Voir le
-            site</button>
+            <span class="langage">CSS</span>, <span class="langage">JS</span> et <span class="langage">MySQL</span>
+          </p>
+          <!-- <button class="button effectButton" onclick="window.open('sites/ChoixDeChat/index.html', '_blank');">Voir le
+            site</button> -->
+          <a href="https://github.com/BenjaminBrehier/SentyMental" target="_blank"><img src="./res/img/Github.png"></a>
         </div>
       </div>
     </div>
+
     <div id="CDC" class="overlay">
       <div class="popup">
         <h3>ChoixDeChat</h3>
@@ -102,9 +117,16 @@
     </div>
 
 
-    <div class="item large">
-      <a class="small" onclick="afficher('PortFolioV1');"><img src="./res/img/PortFolioV1.png"></a>
-      <a class="big under" onclick="afficher('PortFolioV2');"><img class="border" src="./res/img/PortFolioV2.png"></a>
+
+
+
+    <div class="container large" id="gauche">
+      <div class="item small">
+        <img src="./res/img/PortFolioV1.png" onclick="afficher('PortFolioV1');" alt="Image du portfolioV1">
+      </div>
+      <div class="item big">
+        <img src="./res/img/PortFolioV2.png" onclick="afficher('PortFolioV2');" alt="Image du portfolioV2">
+      </div>
     </div>
 
     <div id="PortFolioV1" class="overlay">
@@ -118,6 +140,7 @@
             mes attentes. Il a été coder en <span class="langage">HTML</span>, <span class="langage">CSS</span> et <span
               class="langage">JS</span>.</p>
 
+          <a href="https://github.com/BenjaminBrehier/PortFolioV1" target="_blank"><img src="./res/img/Github.png"></a>
           <button class="button effectButton" onclick="window.open('sites/PortfolioV1/index.html', '_blank');">Voir le
             site</button>
         </div>
@@ -134,27 +157,37 @@
           <p>Il a été coder en <span class="langage">HTML</span>, <span class="langage">CSS</span> et <span
               class="langage">JS</span>.</p>
 
-          <button class="button effectButton" onclick="window.open('sites/ChoixDeChat/index.html', '_blank');">Voir le
+          <a href="https://github.com/BenjaminBrehier/PortFolioV2" target="_blank"><img src="./res/img/Github.png"></a>
+          <button class="button effectButton" onclick="window.open('sites/PortFolioV2/index.html', '_blank');">Voir le
             site</button>
         </div>
       </div>
     </div>
 
-    <div class="fiche">
-      <a href="https://twitter.com/Exe2Glace"><img src="./res/img/Tweeter.png"></a>
-    </div>
 
-    <div class="fiche">
-      <img style="width:160%; margin-left: -30%; margin-block: auto;" src="./res/img/BenSouriant.png">
-    </div>
 
-    <div class="fiche">
-      <a href="https://github.com/BenjaminBrehier"><img style="width: 80%; margin-left: 10%;"
-          src="./res/img/Github.png"></a>
-    </div>
 
-    <div class="item normal">
-      <a onclick="afficher('TravelAgency');"><img class="border" src="./res/img/TravelAgency.jpg"></a>
+    <div class="container normal"></div> <!--! est caché dessous  -->
+    <div class="container normal">
+      <div class="item triplet fiche">
+        <img onclick ="window.open('https://twitter.com/Exe2Glace', '_blank');" src="./res/img/Tweeter.png"></div>
+      <div class="item triplet fiche">
+        <img style="width:160%; margin-left: -30%; margin-block: auto;" src="./res/img/BenSouriant.png">
+      </div>
+      <div class="item triplet fiche">
+        <img onclick ="window.open('https://github.com/BenjaminBrehier', '_blank');" src="./res/img/Github.png">
+      </div>
+    </div>
+      
+    <div class="container normal"></div> <!--! est caché dessous  -->
+    <div class="container normal"></div>  <!--! est caché dessous  -->
+
+
+
+    <div class="container normal">
+      <div class="item">
+        <img src="./res/img/TravelAgency.jpg" onclick="afficher('TravelAgency');" alt="Capture d'écran de TravelAgency">
+      </div>
     </div>
     <div id="TravelAgency" class="overlay">
       <div class="popup">
@@ -166,22 +199,23 @@
           <p>J'ai réalisé ce projet en suivant un cours de programmation web sur <a class="langage"
               href="https://www.udemy.com/" target="_blank">Udemy</a>.</p>
           <p>Celui-ci est programmé en <span class="langage">HTML</span> et <span class="langage">CSS</span>.</p>
-          <button class="button effectButton" onclick="window.open('sites/ChoixDeChat/index.html', '_blank');">Voir le
+          <button class="button effectButton" onclick="window.open('sites/TravelAgency/index.html', '_blank');">Voir le
             site</button>
         </div>
       </div>
     </div>
 
-    <div class="item petite">
-      <a onclick="afficher('Pacman');"><img src="./res/img/Couche 2.png" alt="Pacman Project Image"></a>
-    </div>
 
-    <div class="item petite">
-      <a class="buttonPop" onclick="afficher('TntWars');"><img src="./res/img/TntWars copie.png" alt="TntWars"></a>
-    </div>
-
-    <div class="item petite">
-      <a onclick="afficher('Swan');"><img class="border" src="./res/img/Swan.png" alt="Swan logo"></a>
+    <div class="container normal">
+      <div class="item triplet">
+        <img src="./res/img/Couche 2.png" onclick="afficher('Pacman');" alt="Pacman Project Image">
+      </div>
+      <div class="item triplet">
+        <img src="./res/img/TntWars copie.png" onclick="afficher('TntWars');" alt="TntWars">
+      </div>
+      <div class="item triplet">
+        <img class="border" src="./res/img/Swan.png" onclick="afficher('Swan');" alt="Swan logo">
+      </div>
     </div>
 
     <div id="Pacman" class="overlay">
@@ -193,9 +227,8 @@
           <p>Passionné de jeux vidéos et amateur de jeux rétro j'ai décidé de recoder le célèbre jeu Pacman</p>
           <p>Ce projet s'inscrit dans un autre projet de construction d'une borne arcade rétro.</p>
           <p>Celui-ci est programmé en <span class="langage">Python</span>.</p>
-          <button class="button effectButton" onclick="window.open('sites/ChoixDeChat/index.html', '_blank');">Voir le
-            site</button>
         </div>
+        <a href="https://github.com/BenjaminBrehier/PacMan" target="_blank"><img src="./res/img/Github.png"></a>
       </div>
     </div>
 
@@ -217,13 +250,14 @@
         <hr>
         <a class="close" href="#">&times;</a>
         <div class="content">
-          <p>Ce logiciel transforme un fichier CSV de strategies par plusieurs joueurs dans un fichier HTML qui classe ces joueurs (réferrez-vous au document Swan pour les règles du jeu).</p>
-          <p>Ce projet a été réalisé dans le cadre universitaire avec <a class="langage" href="https://clementgeraudie.fr"
-            target="_blank">Clément Géraudie</a> et <a class="langage" href="https://github.com/denisebitca"
-            target="_blank">Denise Bitca</a></p>
-          <p>Celui-ci est programmé en <span class="langage">C++</span>, <span class="langage">HTML</span> et <span class="langage">CSS</span>.</p>
-          <button class="button effectButton" onclick="window.open('sites/ChoixDeChat/index.html', '_blank');">Voir le
-            site</button>
+          <p>Ce logiciel transforme un fichier CSV de strategies par plusieurs joueurs dans un fichier HTML qui classe
+            ces joueurs (réferrez-vous au document Swan pour les règles du jeu).</p>
+          <p>Ce projet a été réalisé dans le cadre universitaire avec <a class="langage"
+              href="https://clementgeraudie.fr" target="_blank">Clément Géraudie</a> et <a class="langage"
+              href="https://github.com/denisebitca" target="_blank">Denise Bitca</a></p>
+          <p>Celui-ci est programmé en <span class="langage">C++</span>, <span class="langage">HTML</span> et <span
+              class="langage">CSS</span>.</p>
+          <a href="https://github.com/BenjaminBrehier/swan" target="_blank"><img src="./res/img/Github.png"></a>
         </div>
       </div>
     </div>
